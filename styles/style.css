@@ -97,12 +97,102 @@ body {
   font-family: 'Spartan', sans-serif;
   background-color: hsl(222, 26%, 31%);
 }
+/* theme2 */
 body.active1{
   background-color: hsl(0, 0%, 90%);
 }
+body.active1 .title h3{
+  color: hsl(60, 10%, 19%);
+}
+body.active1 .control{
+  color: hsl(60, 10%, 19%);
+  }
+body.active1  form input{
+  background-color: hsl(0, 0%, 93%);
+color: hsl(60, 10%, 19%);
+
+}
+body.active1 .box{
+  background-color: hsl(0, 5%, 81%);
+}
+body.active1 .cal-body{
+  background-color:hsl(0, 5%, 81%) ;
+}
+body.active1  button{
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+  color: hsl(60, 10%, 19%);
+}
+body.active1 button:active{
+  box-shadow: none;
+}
+body.active1 .reset, .del{
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+  color:  hsl(0, 0%, 100%);
+}
+body.active1 .del{
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+  color:  hsl(0, 0%, 100%);
+}
+
+body.active1 .equal{
+background-color: hsl(25, 98%, 40%);
+box-shadow: 0px 3px 0px 0px  hsl(25, 99%, 27%);
+color:  hsl(0, 0%, 100%);
+}
+  
+/* theme3 */
+
 body.active2{
   background-color: hsl(268, 75%, 9%);
 }
+body.active2 .title h3{
+  color: hsl(52, 100%, 62%);
+}
+body.active2 .control{
+  color: hsl(52, 100%, 62%);
+  }
+body.active2  form input{
+  background-color: hsl(268, 71%, 12%);
+color: hsl(52, 100%, 62%);
+
+}
+body.active2 .box{
+  background-color: hsl(268, 71%, 12%);
+}
+body.active2 .box #circle{
+	background-color: hsl(176, 100%, 44%);
+}
+body.active2 .cal-body{
+  background-color:hsl(268, 71%, 12%) ;
+}
+body.active2  button{
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+  color: hsl(52, 100%, 62%);
+}
+body.active2 button:active{
+  box-shadow: none;
+}
+body.active2 .reset, .del{
+  background-color:  hsl(281, 89%, 26%);
+  box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+  color:  hsl(0, 0%, 100%);
+}
+body.active2 .del{
+  background-color:  hsl(281, 89%, 26%);
+  box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+  color:  hsl(0, 0%, 100%);
+}
+
+body.active2 .equal{
+background-color: hsl(176, 100%, 44%);
+box-shadow: 0px 3px 0px 0px   hsl(177, 92%, 70%);
+color:  hsl(198, 20%, 13%);
+}
+/* end */
 .container{
   display: flex;
   flex-direction: column;
@@ -116,7 +206,7 @@ body.active2{
 
 .box{
   width: 2.2rem;
-	height: 20px;
+	height: 25px;
 	background-color: hsl(224, 36%, 15%);
 	border-radius: 30px;
 	position: relative;
@@ -124,9 +214,8 @@ body.active2{
   align-items: center;
   justify-content: flex-start;
   padding: 4px;
-  
-
 }
+
 .box #circle{
 	width: 14px;
 	height: 14px;
@@ -135,9 +224,9 @@ body.active2{
 	border-radius: 30px;
 }
 
-body.active1 .control #circle{
+/* body.active1 .control #circle{
 	background-color: hsl(25, 98%, 40%);
-}
+} */
 
 .title{
   display: flex;
@@ -179,7 +268,6 @@ color: white;
 }
 .number p{
 	cursor: pointer;  
-
 }
 
 .screen{
@@ -255,3 +343,18 @@ color:  hsl(0, 0%, 100%);
 }
 
 
+@media only screen and (max-width: 786px) {
+  .container{
+    width: 10rem ;
+  }
+}
+
+.attribution {
+  font-size: 0.4rem;
+  text-align: center;
+  /* margin: 2rem 0; */
+  margin-top: -1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
