@@ -101,7 +101,7 @@ body {
 body.active1{
   background-color: hsl(0, 0%, 90%);
 }
-body.active1 .title h3{
+body.active1 .title h1{
   color: hsl(60, 10%, 19%);
 }
 body.active1 .control{
@@ -148,7 +148,7 @@ color:  hsl(0, 0%, 100%);
 body.active2{
   background-color: hsl(268, 75%, 9%);
 }
-body.active2 .title h3{
+body.active2 .title h1{
   color: hsl(52, 100%, 62%);
 }
 body.active2 .control{
@@ -235,7 +235,7 @@ color:  hsl(198, 20%, 13%);
   width: 100%;
 
 }
-.title h3{
+.title h1{
   text-transform: lowercase;
   font-size: 1rem;
   color: white;
@@ -283,6 +283,9 @@ form input{
   border: none;
   width: 100%;
 }
+input:active, input:focus { 
+  outline: none; 
+ }
 
 .cal-body{
   display: flex;
@@ -328,6 +331,9 @@ button{
 button:active{
   box-shadow: none;
 }
+button:active, button:focus { 
+  outline: none; 
+ }
 
 .reset, .del{
   background-color: hsl(225, 21%, 49%);
