@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+/* ## Colors
+
+### Theme 1
+
+#### Backgrounds
+
+- Very dark desaturated blue (main background): hsl(222, 26%, 31%)
+- Very dark desaturated blue (toggle background, keypad background): hsl(223, 31%, 20%)
+- Very dark desaturated blue (screen background): hsl(224, 36%, 15%)
+
+#### Keys
+
+- Desaturated dark blue (key background): hsl(225, 21%, 49%)
+- Desaturated dark blue (key shadow): hsl(224, 28%, 35%)
+
+- Red (key background, toggle): hsl(6, 63%, 50%)
+- Dark red (key shadow): hsl(6, 70%, 34%)
+
+- Light grayish orange (key background): hsl(30, 25%, 89%)
+- Grayish orange (key shadow): hsl(28, 16%, 65%)
+
+#### Text
+
+- Very dark grayish blue: hsl(221, 14%, 31%)
+- White: hsl(0, 0, 100%)
+
+### Theme 2
+
+#### Backgrounds
+
+- Light gray (main background): hsl(0, 0%, 90%)
+- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
+- Very light gray (screen background): hsl(0, 0%, 93%)
+
+#### Keys
+
+- Dark moderate cyan (key background): hsl(185, 42%, 37%)
+- Very dark cyan (key shadow): hsl(185, 58%, 25%)
+
+- Orange (key background, toggle): hsl(25, 98%, 40%)
+- Dark orange (key shadow): hsl(25, 99%, 27%)
+
+- Light grayish yellow (key background): hsl(45, 7%, 89%)
+- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
+
+#### Text
+
+- Very dark grayish yellow: hsl(60, 10%, 19%)
+- White (text): hsl(0, 0, 100%)
+
+### Theme 3
+
+#### Backgrounds
+
+- Very dark violet (main background): hsl(268, 75%, 9%)
+- Very dark violet (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
+
+#### Keys
+
+- Dark violet (key background): hsl(281, 89%, 26%)
+- Vivid magenta (key shadow): hsl(285, 91%, 52%)
+
+- Pure cyan (key background, toggle): hsl(176, 100%, 44%)
+- Soft cyan (key shadow): hsl(177, 92%, 70%)
+
+- Very dark violet (key background): hsl(268, 47%, 21%)
+- Dark magenta (key shadow): hsl(290, 70%, 36%)
+
+#### Text
+
+- Light yellow: hsl(52, 100%, 62%)
+- Very dark blue: hsl(198, 20%, 13%)
+- White (text): hsl(0, 0, 100%) */
+
+
+/* :root {
+   
+    --clr-Dark-cyan: hsl(185, 75%, 39%);
+    --clr-Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --clr-Dark-grayish-blue: hsl(227, 10%, 46%);
+   
+    --clr-Dark-gray: hsl(0, 0%, 59%);
+} */
+
+
+html{
+    font-size: 32px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+  font-family: 'Spartan', sans-serif;
+  background-color: hsl(222, 26%, 31%);
+}
+body.active1{
+  background-color: hsl(0, 0%, 90%);
+}
+body.active2{
+  background-color: hsl(268, 75%, 9%);
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 14rem ;
+  margin: 0 auto;
+}
+
+
+.box{
+  width: 2.2rem;
+	height: 20px;
+	background-color: hsl(224, 36%, 15%);
+	border-radius: 30px;
+	position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4px;
+  
+
+}
+.box #circle{
+	width: 14px;
+	height: 14px;
+	background-color: hsl(6, 63%, 50%);
+	z-index: 1;
+	border-radius: 30px;
+}
+
+body.active1 .control #circle{
+	background-color: hsl(25, 98%, 40%);
+}
+
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+.title h3{
+  text-transform: lowercase;
+  font-size: 1rem;
+  color: white;
+}
+
+.control{
+display: flex;
+justify-content: center;
+align-items: flex-end;
+font-size: 0.4rem;
+text-transform: uppercase;
+color: white;
+}
+
+.theme{
+  margin-right: 1rem;
+}
+
+.toggle{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.2rem;
+}
+.toggle .number{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.number p{
+	cursor: pointer;  
+
+}
+
+.screen{
+  margin: 0.6rem 0;
+}
+
+form input{
+  padding: 0.8rem;
+  text-align: right;
+  border-radius: 0.4rem;
+  background-color: hsl(224, 36%, 15%);
+  color: white;
+  border: none;
+  width: 100%;
+}
+
+.cal-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:hsl(223, 31%, 20%) ;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  width: 100%;
+}
+
+.btn{
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.reset-equal{
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  
+}
+.reset-equal button{
+  width: 100%;
+}
+.reset{
+  margin-right: 0.5rem;
+}
+
+button{
+  border:none;
+  border-radius: 0.2rem;
+  background-color: hsl(32, 26%, 89%);
+  box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
+  font-size: 0.8rem;
+  color: hsl(221, 14%, 31%);
+  
+  padding: 10px;
+}
+button:active{
+  box-shadow: none;
+}
+
+.reset, .del{
+  background-color: hsl(225, 21%, 49%);
+  font-size: 0.5rem;
+  box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+  color:  hsl(0, 0%, 100%);
+}
+
+.equal{
+background-color: hsl(6, 63%, 50%);
+box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);
+color:  hsl(0, 0%, 100%);
+}
+
+
